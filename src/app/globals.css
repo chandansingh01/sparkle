@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge, and Firefox */
+html {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+ 
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.stretchText{
+  font-size: 24rem ;
+}
+
+.paragraph{
+  display: flex;
+  font-size: 18px;
+  line-height: 1;
+  padding: 40px;  
+  color: white;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  .word{
+    position: relative;
+    margin-right: 4px;
+    margin-top: 12px;
+    .shadow{
+      position: absolute;
+      opacity: 20%;
+    }
+  }
+  
+}
+
+
+.bigTextScroll{
+  /* display: flex; */
+  text-align: center;
+  font-size: calc(1rem + 7vw);
+  font-weight: 500;
+  text-transform: capitalize;
+  line-height: 1.1;
+  
+  padding: 24px;  
+  color: white;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  .word{
+    position: relative;
+    .shadow{
+      position: absolute;
+      opacity: 20%;
+    }
+  }
+  
+}
